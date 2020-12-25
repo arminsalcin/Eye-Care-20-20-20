@@ -1,4 +1,4 @@
-export const defaultTime = { minutes: 0, seconds: 5 };
+export const defaultTime = { minutes: 20, seconds: 59 };
 export const restTime = { minutes: 0, seconds: 20 };
 
 export const notificationSound =
