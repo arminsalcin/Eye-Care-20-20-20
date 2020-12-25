@@ -118,9 +118,9 @@ const createWindow = async () => {
     }
   });
 
-  // mainWindow.webContents.on('devtools-opened', () => {
-  //   mainWindow.webContents.closeDevTools();
-  // });
+  mainWindow.webContents.on('devtools-opened', () => {
+    mainWindow.webContents.closeDevTools();
+  });
 
   // Remove this if your app does not use auto updates
   // eslint-disable-next-line
