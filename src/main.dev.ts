@@ -11,7 +11,7 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import path from 'path';
-import { app, BrowserWindow, shell, Tray } from 'electron';
+import { app, BrowserWindow, shell, Tray, Menu, nativeImage } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
@@ -52,7 +52,7 @@ const installExtensions = async () => {
 };
 
 const createWindow = async () => {
-  const trayIcon = path.join(__dirname, '../assets/icons/16x16.png');
+  const trayIcon = path.join(__dirname, '../assets/tray/trayIcon.png');
   let appIcon = null;
   appIcon = new Tray(trayIcon);
 
@@ -102,8 +102,8 @@ const createWindow = async () => {
     mainWindow = null;
   });
 
-  const menuBuilder = new MenuBuilder(mainWindow);
-  menuBuilder.buildMenu();
+  // const menuBuilder = new MenuBuilder(mainWindow);
+  // menuBuilder.buildMenu();
 
   // Open urls in the user's browser
   mainWindow.webContents.on('new-window', (event, url) => {
@@ -111,11 +111,42 @@ const createWindow = async () => {
     shell.openExternal(url);
   });
 
+  let contextMenu = Menu.buildFromTemplate([
+    {
+      label: 'Show App',
+      click: function () {
+        mainWindow.show();
+      },
+    },
+    {
+      label: 'Quit',
+      click: function () {
+        app.isQuiting = true;
+        app.quit();
+      },
+    },
+  ]);
+
+  appIcon.setContextMenu(contextMenu);
   appIcon.setIgnoreDoubleClickEvents(true);
-  appIcon.on('click', function () {
-    if (!mainWindow.isVisible()) {
-      mainWindow.show();
+  // appIcon.on('click', function () {
+  //   if (!mainWindow.isVisible()) {
+  //     mainWindow.show();
+  //   }
+  // });
+
+  mainWindow.on('minimize', function (event) {
+    event.preventDefault();
+    mainWindow.hide();
+  });
+
+  mainWindow.on('close', function (event) {
+    if (!app.isQuiting) {
+      event.preventDefault();
+      mainWindow.hide();
     }
+
+    return false;
   });
 
   mainWindow.webContents.on('devtools-opened', () => {
