@@ -98,11 +98,7 @@ const MainScreen: React.FC = () => {
           </Button>
         ) : (
           <Button onClick={() => pause()}>
-            <BsFillPauseFill
-              size={70}
-              color="white"
-              style={{ marginLeft: 4 }}
-            />
+            <BsFillPauseFill size={70} color="white" />
           </Button>
         )}
 
