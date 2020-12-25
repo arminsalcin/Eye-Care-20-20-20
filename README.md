@@ -7,3 +7,10 @@ So our eyes began to suffer more than they should, ranging from eye pain to migr
 
 # Download
 You can download apps for OSX or Windows
+
+
+[![Alt text](./download-macos.png?raw=true "Title")](http://google.com.au/) 
+
+[![Alt text](./download-windows.png?raw=true "Title"){:style="float: right;margin-right: 7px;margin-top: 7px;"}](http://google.com.au/)
+
+
