@@ -1,0 +1,41 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+body {
+  position: relative;
+  color: white;
+  height: 100vh;
+  background: rgb(59,152,194);
+  background: linear-gradient(180deg, rgba(59,152,194,1) 27%, rgba(22,22,102,1) 100%);
+  font-family: 'Roboto', sans-serif;
+  overflow-y: hidden;
+  margin:0;
+ padding:0;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
