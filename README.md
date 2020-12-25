@@ -3,7 +3,7 @@
            <img alt="macos" src="https://github.com/arminsalcin/Eye-Care-20-20-20/raw/master/image1.png"
                   height="300" align="left">
           <img alt="windows" src="https://github.com/arminsalcin/Eye-Care-20-20-20/raw/master/image2.png"
-                  height="300" style='margin-left: 20px; margin-top:20px;'>
+                  height="300" style='margin-left: 20px'>
 </div>
 
 # About Project 🤔
