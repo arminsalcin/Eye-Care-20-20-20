@@ -25,3 +25,21 @@ You can download apps for OSX or Windows
          <img alt="windows" src="https://github.com/arminsalcin/Eye-Care-20-20-20/raw/master/download-windows.png"
                height="100" style='margin-left: 20px'>
       </a>
+
+# Development
+First clone repository to your local machine then run
+
+`yarn`
+
+And to run type
+
+`yarn start`
+
+# Build
+To buid on your local platform first run
+
+`yarn build`
+
+And then run for building files
+
+`yarn package`
