@@ -1,4 +1,10 @@
 # Eye Care 20-20-20 👀
+<div>
+           <img alt="macos" src="https://github.com/arminsalcin/Eye-Care-20-20-20/raw/master/image1.png"
+                  height="300" align="left">
+          <img alt="windows" src="https://github.com/arminsalcin/Eye-Care-20-20-20/raw/master/image2.png"
+                  height="300" style='margin-left: 20px'>
+</div>
 
 # About Project 🤔
 As we all started working from house because of situation with virus, we all started to look more in our monitors as we dont have people near to have chit-chat with them time to time. 
