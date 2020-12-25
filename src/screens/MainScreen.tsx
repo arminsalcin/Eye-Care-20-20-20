@@ -5,6 +5,7 @@ import Button from '../components/Button/Button';
 import ToggleButton from '../components/ToggleButton/ToggleButton';
 import useTimer from '../hooks/Timer';
 import { showNotification } from '../utils';
+
 import {
   ButtonContainer,
   Container,
